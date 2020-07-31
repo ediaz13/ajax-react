@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import { BrowserRouter} from 'react-router-dom'
 import Axios from 'axios';
 import Blog from './containers/Blog/Blog';
 
@@ -27,9 +28,11 @@ Axios.interceptors.response.use(response => {
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Blog />
-      </div>
+      <BrowserRouter>
+        <div className="App">
+          <Blog />
+        </div>
+      </BrowserRouter>
     );
   }
 }
